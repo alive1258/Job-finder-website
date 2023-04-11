@@ -21,10 +21,11 @@ const FeaturedJobs = () => {
       </div>
       <div className="grid md:grid-cols-2 gap-4 mt-8">
         {featuredjobs.slice(0, visible).map((featuredjob) => (
-          <CardFeaturedJobs
+          <CardFea
+          turedJobs
             key={featuredjob._id}
             featuredjob={featuredjob}
-          ></CardFeaturedJobs>
+          ></CardFea>
         ))}
       </div>
       <div className="mt-4 text-center">

@@ -10,38 +10,38 @@ import Blog from "./components/Blog/Blog";
 import Statistics from "./components/Statistics/Statistics";
 import AppliedJob from "./components/AppliedJob/AppliedJob";
 import JobDetails from "./components/JobDetails/JobDetails";
+import ApplyJobs from "./Loaders/ApplyJobs";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    children:[
+    children: [
       {
-        path:'/',
-        element:<Home></Home>,
-        loader:()=> fetch("/featuredjobs.json")
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("/featuredjobs.json"),
+      },
+      {
+        path: "/job/:jobId",
+        element: <JobDetails></JobDetails>,
+        loader: ({ params }) => fetch("/featuredjobs.json"),
+      },
+      {
+        path: "/statistics",
+        element: <Statistics></Statistics>,
+      },
+      {
+        path: "/appliedjobs/:appliedjobsId",
+        element: <AppliedJob></AppliedJob>,
+        loader: ApplyJobs,
+      },
 
-      },
       {
-        path:'/job/:jobId',
-        element:<JobDetails></JobDetails>,
-        loader:({params}) => fetch("/featuredjobs.json")
+        path: "/blog",
+        element: <Blog></Blog>,
       },
-      {
-        path:'/statistics',
-        element:<Statistics></Statistics>
-      },
-      {
-        path:'/appliedjobs',
-        element:<AppliedJob></AppliedJob>
-      },
-
-      {
-        path:'/blog',
-        element:<Blog></Blog>
-      }
-     
-    ]
+    ],
   },
 ]);
 

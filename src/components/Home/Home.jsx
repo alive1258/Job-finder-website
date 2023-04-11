@@ -3,12 +3,12 @@ import janko from "../img/janko-preview.png";
 import './Home.css'
 import JobCategory from "../JobCategory/JobCategory";
 import FeaturedJobs from "../FeaturedJob/FeaturedJobs";
-// import { useLoaderData } from "react-router-dom";
+
 
 const Home = () => {
-    // const featuredjobs =useLoaderData()
+
   return (
-    <div className="px-8 py-4 ">
+    <div className="px-8 py-8 ">
       <header className="md:flex md:flex-row mt-8">
         <div className="pt-16">
           <h1 className="md:text-7xl font-bold">
@@ -31,7 +31,7 @@ const Home = () => {
       <JobCategory></JobCategory>
       <FeaturedJobs></FeaturedJobs>
       <div>
-        {/* <p>featuredjobs:{featuredjobs.length}</p> */}
+      
       </div>
     </div>
   );

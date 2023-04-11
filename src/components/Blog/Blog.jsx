@@ -2,8 +2,8 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div>
-      <div className="mt-24">
+    <div className="px-8 py-8">
+      <div className="mt-24 ">
         <h1 className="text-2xl font-bold">
           Q.1. When should use context api?
         </h1>
@@ -34,6 +34,17 @@ const Blog = () => {
           between renders. It can be used to store a mutable value that does not
           cause a re-render when updated. It can be used to access a DOM element
           directly.
+        </p>
+      </div>
+      <div className="mt-4">
+        <h1 className="text-2xl font-bold">Q.3.what is useMemo?</h1>
+        <p>
+          Ans.... useMemo is a React Hook that lets you cache the result of a
+          calculation between re-renders. The useMemo Hook can be used to keep
+          expensive, resource intensive functions from needlessly running. In
+          this example, we have an expensive function that runs on every render.
+          When changing the count or adding a todo, you will notice a delay in
+          execution.
         </p>
       </div>
     </div>

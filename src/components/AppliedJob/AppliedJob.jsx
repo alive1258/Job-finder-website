@@ -6,7 +6,7 @@ const AppliedJob = () => {
   console.log(applyJobs);
 
 
-  return <div>AppliedJob {applyJobs.length}</div>;
+  return <div>AppliedJob </div>;
 };
 
 export default AppliedJob;

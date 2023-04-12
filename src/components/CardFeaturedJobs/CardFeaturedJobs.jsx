@@ -13,7 +13,7 @@ const CardFeaturedJobs = ({ featuredjob }) => {
     salary,
   } = featuredjob;
   return (
-    <div className="border-2 px-8 py-6 rounded-lg">
+    <div className="border-2 px-4 py-8 rounded-lg">
       <img className="h-24 w-24" src={picture} alt="" />
       <p className="text-xl font-semibold">{jobTitle}</p>
       <p>{company}</p>

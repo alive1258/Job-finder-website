@@ -19,7 +19,7 @@ const FeaturedJobs = () => {
           need. Its your future.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-4 mt-8">
+      <div className="grid md:grid-cols-2 py-8 gap-4 mt-8">
         {featuredjobs.slice(0, visible).map((featuredjob) => (
           <CardFeaturedJobs
             key={featuredjob._id}
@@ -29,7 +29,7 @@ const FeaturedJobs = () => {
       </div>
       <div className="mt-4 text-center">
         <button
-          onClick={seeAllJobs}
+          onClick={()=>seeAllJobs()}
           className="bg-[#7E90FE] text-white font-semibold  p-4 rounded-lg"
         >
           See All Jobs

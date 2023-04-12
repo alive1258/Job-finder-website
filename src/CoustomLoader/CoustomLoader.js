@@ -1,7 +1,7 @@
 import { getApplyJob } from "../Utility/fakeDB";
 
 export const jobAllData = async () => {
-  const jobsData = await fetch("featuredjobs.json");
+  const jobsData = await fetch("/featuredjobs.json");
   const jobsAll = await jobsData.json();
 
   const savedJob = getApplyJob();

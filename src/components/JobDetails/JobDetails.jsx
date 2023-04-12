@@ -11,7 +11,7 @@ const JobDetails = () => {
   let { jobId } = useParams();
   //   console.log(jobId);
   const [job, setJob] = useState([]);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
   useEffect(() => {
     const jobData = jobDeatils.find((jobDeatil) => jobDeatil._id === jobId);
     setJob(jobData);
@@ -28,8 +28,8 @@ const JobDetails = () => {
     <div>
       <h1 className="text-center mt-24 text-4xl font-bold"> Job Details</h1>
       <div className="px-16 py-4 mt-24">
-        <div className="md:flex  gap-4">
-          <div>
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="col-span-2">
             {/* <p>company:{job.company}</p> */}
             <p>
               <span className="text-lg font-semibold my-4">
@@ -54,6 +54,8 @@ const JobDetails = () => {
               <p>{job.experiences}</p>
             </div>
           </div>
+
+
           <div>
             <div className="px-4 py-4 bg-gray-200 w-full rounded-lg">
               <h1 className="font-semibold text-lg ">Job Details</h1>

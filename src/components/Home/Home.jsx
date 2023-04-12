@@ -1,6 +1,5 @@
 import React from "react";
 import janko from "../img/janko-preview.png";
-import './Home.css'
 import JobCategory from "../JobCategory/JobCategory";
 import FeaturedJobs from "../FeaturedJob/FeaturedJobs";
 

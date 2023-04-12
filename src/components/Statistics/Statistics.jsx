@@ -10,7 +10,6 @@ import {
 } from "recharts";
 
 const Statistics = () => {
-    
   const marksExam = [
     {
       id: 1,
@@ -49,9 +48,10 @@ const Statistics = () => {
     },
   ];
   return (
-    
     <div className="mt-36">
-        <h1 className="mb-12 text-center font-bold text-4xl">Assignment Marks Rechart</h1>
+      <h1 className="mb-12 text-center font-bold text-4xl">
+        Assignment Marks Rechart
+      </h1>
       <AreaChart width={1100} height={400} data={marksExam}>
         <XAxis dataKey="name" />
         <YAxis />

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-// import Home from "../Home/Home";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
@@ -45,7 +43,6 @@ const Header = () => {
           </button>
         </div>
       </nav>
-  
     </div>
   );
 };

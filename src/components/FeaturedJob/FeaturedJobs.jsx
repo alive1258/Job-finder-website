@@ -29,7 +29,7 @@ const FeaturedJobs = () => {
       </div>
       <div className="mt-4 text-center">
         <button
-          onClick={()=>seeAllJobs()}
+          onClick={() => seeAllJobs()}
           className="bg-[#7E90FE] text-white font-semibold  p-4 rounded-lg"
         >
           See All Jobs

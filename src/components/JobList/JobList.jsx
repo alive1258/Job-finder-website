@@ -12,20 +12,10 @@ const JobList = ({ addJob }) => {
     location,
     salary,
   } = addJob;
-//   const [jobApply, setJobApply] = addJob(jobType1);
 
-//   const filterItem = (remoteJob) => {
-//     const updateJobs = addJob.filter((currentJob) => {
-//       return currentJob.jobType1 === remoteJob;
-//     });
-//     setJobApply(updateJobs)
-//   };
   return (
     <div>
-      <div className="flex gap-4 ">
-        <button >Remote</button>
-        <button>Onsite</button>
-      </div>
+      
       <div className="border-2 border-gray-400 w-full  p-4 m-4">
         <div className="flex justify-between">
           <div className="flex gap-4">

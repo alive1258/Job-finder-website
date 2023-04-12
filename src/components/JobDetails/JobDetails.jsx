@@ -1,26 +1,17 @@
 import React, { useEffect, useState } from "react";
-// import { BeakerIcon } from "@heroicons/react/24/solid";
 import { useLoaderData, useParams } from "react-router-dom";
 import { addToDB } from "../../Utility/fakeDB";
 
 const JobDetails = () => {
-  // const {_id}=featuredjob
   const jobDeatils = useLoaderData();
-  //   console.log(jobDeatils);
-
   let { jobId } = useParams();
-  //   console.log(jobId);
   const [job, setJob] = useState([]);
-  // const [cart, setCart] = useState([]);
+
   useEffect(() => {
     const jobData = jobDeatils.find((jobDeatil) => jobDeatil._id === jobId);
     setJob(jobData);
-    // console.log(jobData);
   }, []);
   const handleApplyJob = (job, _id) => {
-    // console.log("job",job._id)
-    // const newCart =[...cart,job]
-    // setCart(newCart)
     addToDB(job);
   };
 
@@ -30,7 +21,6 @@ const JobDetails = () => {
       <div className="px-16 py-4 mt-24">
         <div className="grid md:grid-cols-3 gap-4">
           <div className="col-span-2">
-            {/* <p>company:{job.company}</p> */}
             <p>
               <span className="text-lg font-semibold my-4">
                 Job Description:
@@ -54,7 +44,6 @@ const JobDetails = () => {
               <p>{job.experiences}</p>
             </div>
           </div>
-
 
           <div>
             <div className="px-4 py-4 bg-gray-200 w-full rounded-lg">

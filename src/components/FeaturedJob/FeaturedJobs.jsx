@@ -16,13 +16,12 @@ const FeaturedJobs = () => {
         <h1 className="md:text-6xl font-semibold">Featured Jobs</h1>
         <p className="mt-4 md:text-lg">
           Explore thousands of job opportunities with all the information you
-          need. Its your future
+          need. Its your future.
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-4 mt-8">
         {featuredjobs.slice(0, visible).map((featuredjob) => (
           <CardFeaturedJobs
-          turedJobs
             key={featuredjob._id}
             featuredjob={featuredjob}
           ></CardFeaturedJobs>

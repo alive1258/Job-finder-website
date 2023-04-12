@@ -1,12 +1,25 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import JobList from "../JobList/JobList";
 
 const AppliedJob = () => {
-  const applyJobs = useLoaderData();
-  console.log(applyJobs);
+  const { jobArray } = useLoaderData();
+  console.log(jobArray)
 
+  return (
 
-  return <div>AppliedJob </div>;
+        <div className="mt-28">
+          <ul className="flex flex-col  ">
+            {
+              jobArray.map(addJob => <JobList 
+              addJob={addJob}
+              key={addJob._id}
+              ></JobList>)
+            }
+          </ul>
+        </div>
+  
+  );
 };
 
 export default AppliedJob;

@@ -10,14 +10,15 @@ import Blog from "./components/Blog/Blog";
 import Statistics from "./components/Statistics/Statistics";
 import AppliedJob from "./components/AppliedJob/AppliedJob";
 import JobDetails from "./components/JobDetails/JobDetails";
-import ApplyJobs from "./Loaders/ApplyJobs";
+// import ApplyJobs from "./Loaders/ApplyJobs";
 import Notfound from "./components/NotFound/Notfound";
+import { jobAllData } from "./CoustomLoader/CoustomLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<Notfound></Notfound>,
+    errorElement: <Notfound></Notfound>,
     children: [
       {
         path: "/",
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/appliedjobs",
         element: <AppliedJob></AppliedJob>,
-        // loader: ApplyJobs,
+        loader: jobAllData,
       },
 
       {

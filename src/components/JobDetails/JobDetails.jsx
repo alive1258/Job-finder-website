@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from "react";
 // import { BeakerIcon } from "@heroicons/react/24/solid";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToDB } from "../../Utility/fakeDB";
 
 const JobDetails = () => {
+  // const {_id}=featuredjob
   const jobDeatils = useLoaderData();
   //   console.log(jobDeatils);
 
   let { jobId } = useParams();
-//   console.log(jobId);
+  //   console.log(jobId);
   const [job, setJob] = useState([]);
-const [cart,setCart]=useState([])
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     const jobData = jobDeatils.find((jobDeatil) => jobDeatil._id === jobId);
     setJob(jobData);
     // console.log(jobData);
   }, []);
-  const handleAddJob=(job)=>{
-    // console.log(job)
-    const newCart =[...cart,job]
-    setCart(newCart)
-  }
+  const handleApplyJob = (job, _id) => {
+    // console.log("job",job._id)
+    // const newCart =[...cart,job]
+    // setCart(newCart)
+    addToDB(job);
+  };
 
   return (
     <div>
@@ -58,7 +61,7 @@ const [cart,setCart]=useState([])
               <div className="mt-4">
                 <div>
                   <p className="flex gap-2">
-                    <svg 
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
@@ -178,9 +181,7 @@ const [cart,setCart]=useState([])
               </div>
             </div>
             <div className="bg-[#7E90FE] rounded-lg p-2 mt-4 text-center text-white font-semibold">
-             
-              <button onClick={()=> handleAddJob(job)}>Apply Now</button>
-             
+              <button onClick={() => handleApplyJob(job)}>Apply Now</button>
             </div>
           </div>
         </div>
